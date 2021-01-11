@@ -28,19 +28,6 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-[volume]
-label=
-#label=♪
-instance=Master
-#instance=PCM
-interval=once
-signal=10
-color=#5ab9e6
 
 # Memory usage
 #
@@ -95,7 +82,7 @@ interval=5
 [cpu_usage]
 label=
 interval=10
-min_width=CPU: 100.00%
+min_width=CPU:100.00%
 color=#0af0e4
 #separator=false
 
@@ -105,11 +92,11 @@ color=#0af0e4
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-label=BAT
+#[battery]
+#label=BAT
 #label=⚡
 #instance=1
-interval=30
+#interval=30
 
 # Date Time
 #
@@ -118,14 +105,29 @@ command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
 color=#f00aec
 
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+label=
+#label=♪
+instance=Master
+#instance=PCM
+interval=once
+signal=10
+color=#5ab9e6
+
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-#[mediaplayer]
-#instance=spotify
-#interval=5
-#signal=10
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
 
 # OpenVPN support
 #
@@ -138,9 +140,9 @@ color=#f00aec
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
+[temperature]
+label=TEMP
+interval=10
 
 # Key indicators
 #
