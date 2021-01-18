@@ -190,3 +190,8 @@ gaps outer 1
 ########### meus programas #########
 exec nitrogen --restore &
 exec compton &
+
+########## Autolaunch ##########
+exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
+
