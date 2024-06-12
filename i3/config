@@ -47,7 +47,7 @@ bindsym Mod4+Return exec i3-sensible-terminal
 bindsym $mod+w kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec rofi -modi drun -show
+bindsym $mod+space exec rofi -modi drun -show-icons -show 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -183,14 +183,10 @@ bar {
 }
 
 ##### i3-gaps ##############
-for_window [class=".*"] border pixel 1 #*
-
+for_window [class=".*"] border pixel 2 border_radius 6
+gaps inner 12
+gaps outer 1
 
 ########### meus programas #########
 
-exec picom &
-exec ~/.fehbg &  
-
-################################
-########## Autolaunch ##########
-exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & 
+exec  /home/vibewill/.config/i3/autostart.sh
